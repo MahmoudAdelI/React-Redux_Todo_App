@@ -7,7 +7,7 @@ const AddTodo = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        if(!input.value.trim()) return;
+        if(!input.value.trim()) return; // prevent empty values
                 store.dispatch({
                     type: "ADD TODO",
                     id: nextTodoId++,

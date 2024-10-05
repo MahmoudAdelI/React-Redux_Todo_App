@@ -4,7 +4,7 @@ import VisibleTodoList from "./VisibleTodoList";
 import { combineReducers } from "./redux";
 import { createStore } from "./redux";
 
-//.....................
+// Creating app's reducers and and states
 
 const todo = (state, action) => {
   switch (action.type) {
@@ -49,8 +49,8 @@ const visibilityFilter = (state = 'SHOW_ALL', action) => {
 };
 const todoAppMainReducer = combineReducers({todos, visibilityFilter});
 export const store = createStore(todoAppMainReducer);
-
 //.....................
+
 export default function TodoApp() {
   return (
     <div className="container">
