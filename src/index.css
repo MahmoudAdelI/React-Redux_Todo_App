@@ -49,6 +49,7 @@ input {
   border-radius: .5rem;
   border: 0;
   padding: 1.2rem;
+  font-size: inherit;
 }
 input::placeholder {
   color: #ffffff50;
