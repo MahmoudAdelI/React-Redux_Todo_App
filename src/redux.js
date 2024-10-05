@@ -1,10 +1,12 @@
-export const createStore = (reducer) => {
-    let state;
+export const createStore = (reducer, cachedData) => {
+    //cached data is used for initializing the state with the cached data in LocalStorage it's true
+    let state = cachedData || reducer(undefined, {});
     let listeners = [];
     
     const getState = () => state;
 
     const dispatch = (action) => {
+        //if (chachedData){state = reducer(chachedData, action)}; // Test
         state = reducer(state, action);
         listeners.forEach(listener => listener());
     };
@@ -16,7 +18,6 @@ export const createStore = (reducer) => {
         }
     };
 
-    dispatch({});
     return {getState, dispatch, subscribe};
 }
 

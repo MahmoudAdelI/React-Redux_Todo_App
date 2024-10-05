@@ -1,4 +1,4 @@
-import { store } from "./todoApp";
+import { store } from "./storeInit";
 import { useState, useEffect } from "react";
 
 const Link = ({active, filterTodos, children}) => {

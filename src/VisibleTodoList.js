@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { store } from "./todoApp";
+import { store } from "./storeInit";
 
 
 // returns a filtered version of data based on the filter value

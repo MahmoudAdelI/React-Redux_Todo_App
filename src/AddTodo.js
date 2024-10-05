@@ -1,4 +1,4 @@
-import { store } from "./todoApp";
+import { store } from "./storeInit";
 
 const AddTodo = () => {
     
@@ -14,7 +14,7 @@ const AddTodo = () => {
                     text: input.value.trim()
                 });
                 input.value = '';
-                console.log(store.getState());
+                
     }
     return (
         <form
